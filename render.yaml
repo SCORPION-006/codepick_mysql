@@ -14,11 +14,11 @@ services:
 envVarGroups:
 - name: mysql
   envVars:
-  - key: DATABASE_NAME
+  - key: MYSQL_DATABASE
     value: codepick_backend_production
-  - key: MYSQL_USERNAME
+  - key: MYSQL_USER
     value: app_user
   - key: MYSQL_PASSWORD
-    value: password
-  - key: MYSQL_HOST
-    value: true
+    generateValue: true
+  - key: MYSQL_ROOT_PASSWORD
+    generateValue: true
